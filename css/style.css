@@ -1,0 +1,462 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6, ul, p, a {
+  margin-top: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+@font-face {
+  font-family: 'Muller';
+  src: local('Muller-Light'),
+      url("../fonts/MullerLight.woff2") format("woff2"),
+      url("../fonts/MullerLight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Muller';
+  src: local('Muller-Medium'),
+      url("../fonts/MullerMedium.woff2") format("woff2"),
+      url("../fonts/MullerMedium.woff.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Muller';
+  src: local('Muller-Regular'),
+      url("../fonts/MullerRegular.woff2") format("woff2"),
+      url("../fonts/MullerRegular.woff.woff.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Muller';
+  src: local('Muller-Bold'),
+      url("../fonts/MullerBold.woff2") format("woff2"),
+      url("../fonts/MullerBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --primary: #6D31EE;
+  --second-color: #666666;
+  --primary_shade: #4F28A5;
+  --primary_ligth: #AA9DFA;
+  --text_gray: #A1A6B4;
+  --white: #FFFFFF;
+  --shade_gray: #D2D5DD;
+  --lite_color: #E6E8EC;
+  --ligth_color_40: rgba(230, 232, 236, 0.4);
+  --black: #121723;
+  --ligth_black: #292E39;
+  --red: #FF6F6F;
+  --promo_color: #F0D288;
+  --promo_color_shade: #BB973E;
+}
+
+body {
+  font-family: "Muller", sans-serif;
+  background-color: #E5E5E5;
+}
+
+*:focus-visible {
+  outline: 0;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+
+/*header*/
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+}
+
+.content {
+  margin: 0 auto;
+  width: 1110px;
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0 10px 0;
+}
+
+.header__top__list {
+  display: flex;
+  align-items: center;
+  width: 638px;
+  justify-content: space-between;
+}
+
+.header__top__item {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--black);
+}
+
+.header__top__buttons {
+  display: flex;
+  align-items: center;
+}
+
+.header__top__buttons {
+  width: 152px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__top__btn {
+  padding: 10px 25px;
+  border: 1px solid var(--black);
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/*header__bottom*/
+.header-content {
+  border-bottom: 1px solid var(--ligth_color_40);
+  border-top: 1px solid var(--ligth_color_40);
+}
+
+.header__bottom {
+  display: flex;
+}
+
+.header__bottom__list {
+  display: flex;
+  align-items: center;
+}
+
+.header__bottom__item {
+  margin-right: 52px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--black);
+}
+
+.header__bottom__blog {
+  display: flex;
+  width: 350px;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 52px;
+}
+
+.header__bottom__blog-item {
+  display: flex;
+  align-items: center;
+}
+
+.header__bottom__blog-content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__bottom__blog-item {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 173px;
+  border-right: 1px solid var(--lite_color);
+}
+
+.header__bottom__blog-item:first-child {
+  border-left: 1px solid var(--lite_color);
+}
+
+.header__bottom__text-top {
+  color: var(--text_gray);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.header__bottom__info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 46px;
+  background-color: var(--lite_color);
+}
+
+.header__bottom__text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text_gray);
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: var(--white);
+}
+
+/*hero*/
+.hero__content {
+  padding: 94px 0;
+  width: 57.2%;
+}
+
+.hero__container {
+  position: relative;
+}
+
+.hero__content:before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/microphone.png");
+  background-size: cover;
+  top: 38px;
+  right: 0;
+  background-position: center;
+  width: 351px;
+  height: 372px;
+  background-color: var(--white);
+}
+
+.hero__title {
+  font-size: 60px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.hero__title-info {
+  font-weight: 400;
+}
+
+.hero__descr {
+  font-size: 16px;
+  line-height: 1.5em;
+  font-weight: 400;
+  margin-bottom: 45px;
+}
+
+.hero__btn {
+  padding: 25px 54px;
+  font-size: 20px;
+  color: var(--white);
+  background-color: var(--primary);
+  border-radius: 40px;
+}
+
+/*podcasts*/
+.podcasts {
+  background-color: #F2F2F2;
+  padding: 94px 0;
+}
+
+.podcasts__blog {
+  background-color: var(--white);
+  padding-left: 112px;
+}
+
+.podcasts__title {
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--black);
+}
+
+.podcasts__blog__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.podcasts__blog__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 24px;
+  padding-right: 33px;
+  /*padding-bottom: 24px;*/
+  padding-left: 30px;
+  border-bottom: 1px solid var(--lite_color);
+}
+
+.podcasts__blog__time {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+
+.podcasts__blog__title {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--black);
+  margin-bottom: 4px;
+}
+
+.podcasts__blog__name {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text_gray);
+  padding-bottom: 24px;
+}
+
+.podcasts__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.podcasts__item {
+  position: relative;
+  margin-bottom: 30px;
+  margin-bottom: 30px;
+  width: calc((100% - 30px) / 2);
+}
+
+.podcasts__item:not(:nth-child(2n)) {
+  margin-right: 30px;
+}
+
+.podcasts__item:nth-child(n + 5) {
+  display: none;
+}
+
+.podcasts__item.podcasts__item__visible {
+  display: block;
+}
+
+.podcasts__button__hidden {
+  display: none;
+}
+
+.podcasts__item:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 142px;
+}
+
+.photo-1:before {
+  background-image: url("../img/podcasts-1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.photo-2:before {
+  background-image: url("../img/podcasts-2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.photo-3:before {
+  background-image: url("../img/podcasts-3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.photo-4:before {
+  background-image: url("../img/podcasts-4.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.photo-5:before {
+  background-image: url("../img/podcasts-5.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.photo-6:before {
+  background-image: url("../img/podcasts-6.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.photo-7:before {
+  background-image: url("../img/podcasts-7.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.photo-8:before {
+  background-image: url("../img/podcasts-8.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.podcasts__blog:after {
+  content: "8 июня";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 10px;
+  width: 51px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  background-color: var(--lite_color);
+  text-align: center;
+}
+
+.podcasts__blog__list {
+  display: flex;
+  padding: 5px 30px;
+}
+
+.podcasts__blog__item-bottom {
+  margin-right: 30px;
+}
+
+.podcasts__descr {
+  color: var(--text_gray);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.podcasts__btn {
+  text-align: center;
+}
+
+.podcasts__button {
+  color: var(--primary);
+  font-size: 20px;
+  font-weight: 500;
+  padding: 25px 54px;
+  border: 1px solid var(--primary);
+  border-radius: 40px;
+}
