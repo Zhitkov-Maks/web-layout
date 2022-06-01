@@ -1,0 +1,336 @@
+:root {
+  --primary: #6D31EE;
+  --second-color: #666666;
+  --primary_shade: #4F28A5;
+  --primary_ligth: #AA9DFA;
+  --text_gray: #A1A6B4;
+  --white: #FFFFFF;
+  --shade_gray: #D2D5DD;
+  --lite_color: #E6E8EC;
+  --ligth_color_40: rgba(230, 232, 236, 0.4);
+  --black: #121723;
+  --ligth_black: #292E39;
+  --red: #FF6F6F;
+  --promo_color: #F0D288;
+  --promo_color_shade: #BB973E;
+}
+
+.nav-effect {
+  transition: color .3s ease-in-out,
+  background-color .3s ease-in-out;
+}
+
+.nav-effect path {
+  transition: fill .3s ease-in-out;
+}
+
+.nav-effect:hover path {
+  fill: var(--primary);
+}
+
+.nav-effect:focus-visible path {
+  fill: var(--white);
+  background-color: var(--primary_ligth);
+}
+
+.nav-effect:hover {
+  color: var(--primary);
+}
+
+.nav-effect:focus-visible {
+  color: white;
+  background-color: var(--primary_ligth);
+}
+
+.nav-effect:active {
+  color: var(--primary_shade);
+}
+
+.header__top__btn-searth path {
+  transition: stroke .3s ease-in-out;
+}
+
+.header__top__btn-searth:hover path,
+.header__top__btn-searth:focus-visible path {
+  stroke: var(--primary_ligth);
+}
+
+.header__top__btn-searth:active path {
+  stroke: var(--primary_shade);
+}
+
+.header__top__btn {
+  transition: background-color .3s ease-in-out,
+  color .3s ease-in-out;
+}
+
+.header__top__btn path {
+  transition: stroke .3s ease-in-out;
+}
+
+.header__top__btn:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.header__top__btn:hover path {
+  stroke: var(--white);
+}
+
+.header__top__btn:focus-visible {
+  background-color: var(--primary_ligth);
+}
+
+.header__top__btn:active {
+  background-color: var(--primary_shade);
+  color: var(--white);
+}
+
+.header__top__btn:active path {
+  stroke: var(--white);
+}
+
+.header__bottom__btn path {
+  transition: fill .3s ease-in-out;
+}
+
+.header__bottom__btn:hover path {
+  fill: var(--primary);
+}
+
+.header__bottom__btn:focus-visible path {
+  fill: var(--primary_ligth);
+}
+
+.header__bottom__btn:active path {
+  fill: var(--primary_shade);
+}
+
+
+
+/*hero*/
+.hero__btn {
+  transition: background-color .3s ease-in-out;
+}
+
+.hero__btn:hover,
+.hero__btn:focus-visible {
+  background-color: var(--primary_ligth);
+}
+
+.hero__btn:active {
+  background-color: var(--primary_shade);
+}
+
+
+/*podcasts*/
+.podcasts__button:before {
+  transition: background-color .3s ease-in-out,
+  color .3s ease-in-out;
+}
+
+.podcasts__button:hover:before {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.podcasts__button:focus-visible:before {
+  background-color: var(--primary_ligth);
+}
+
+.podcasts__button:active:before {
+  background-color: var(--primary_shade);
+}
+
+.podcasts__btn-play path,
+.podcasts__btn-play circle {
+  transition: fill .3s ease-in-out,
+  stroke .3s ease-in-out;
+}
+
+.podcasts__btn-play:hover circle {
+  stroke: var(--primary);
+}
+
+.podcasts__btn-play:hover path {
+  fill: var(--primary);
+}
+
+.podcasts__btn-play:focus-visible circle {
+  stroke: var(--primary_ligth);
+}
+
+.podcasts__btn-play:focus-visible path {
+  fill: var(--primary_ligth);
+}
+
+.podcasts__btn-play:active path {
+  fill: var(--white);
+}
+
+.podcasts__btn-play:active circle {
+  fill: var(--primary);
+}
+
+.podcasts-effect:hover + .podcasts__descr {
+  transition: color .3s ease-in-out;
+}
+.podcasts-effect path {
+  transition: fill .3s ease-in-out;
+}
+.podcasts-effect {
+  transition: color .3s ease-in-out;
+}
+
+.podcasts-effect:hover path {
+  fill: var(--primary);
+}
+
+*.podcasts-effect:hover {
+  color: var(--primary);
+}
+
+.podcasts-effect:focus-visible {
+  background-color: var(--primary_ligth);
+  color: var(--white);
+}
+
+.podcasts-effect:focus-visible path {
+  fill: var(--white);
+}
+
+.podcasts-effect:active {
+  color: var(--primary_shade);
+}
+
+.podcasts-effect:active path {
+  fill: var(--primary_shade);
+}
+
+.adv__button {
+  transition: color .3s ease-in-out,
+  background-color .3s ease-in-out;
+}
+.adv__button path {
+  transition: fill .3s ease-in-out;
+}
+
+
+.adv__button:hover {
+  color: var(--black);
+  background-color: var(--promo_color);
+}
+
+.adv__button:hover path:first-child {
+  fill: var(--black);
+}
+
+.adv__button:hover path:last-child {
+  fill: var(--white);
+}
+
+.adv__button:focus-visible {
+  color: var(--black);
+  background-color: var(--promo_color_shade);
+}
+
+.adv__button:active {
+  color: var(--black);
+  background-color: var(--promo_color_shade);
+}
+
+.adv__button:active path:first-child {
+  fill: var(--black);
+}
+
+.adv__button:active path:last-child {
+  fill: var(--white);
+}
+
+.about__form-input {
+  transition: background-color .3s ease-in-out;
+}
+
+.about__form-input:hover {
+  background-color: rgba(230, 232, 236, 0.1);
+}
+
+.about__form-input:focus-visible {
+  background-color: rgba(230, 232, 236, 0.1);
+}
+
+.about__form-input:active {
+  background-color: var(--black)
+}
+
+.quests__accordion__link {
+  transition: color .3s ease-in-out,
+  background-color .3s ease-in-out;
+}
+
+.quests__accordion__link:hover {
+  color: var(--white);
+  background-color: var(--primary_ligth);
+}
+
+.quests__accordion__link:focus-visible {
+  color: var(--white);
+  background-color: var(--primary);
+}
+
+.quests__accordion__link:active {
+  color: var(--white);
+  background-color: var(--primary_shade);
+}
+
+.quests__accordion__list-top {
+  transition: color .3s ease-in-out,
+  background-color .3s ease-in-out;
+}
+.quests__accordion__list-top .quests__accordion__list-btn path,
+.quests__accordion__list-top .quests__accordion__list-btn circle {
+  transition: stroke .3s ease-in-out
+}
+.quests__accordion__list-top.ui-state-active .quests__accordion__title,
+.quests__accordion__list-top.ui-state-active .quests__accordion__list-btn svg,
+.quests__accordion__list-top.ui-state-active .quests__accordion__list-btn path {
+  transition: color .3s ease-in-out, fill .3s ease-in-out, stroke .3s ease-in-out;
+}
+
+.quests__accordion__list-top:hover {
+  color: var(--primary_ligth);
+}
+
+.quests__accordion__list-top:hover .quests__accordion__list-btn path {
+  stroke: var(--primary_ligth);
+}
+
+.quests__accordion__list-top:hover .quests__accordion__list-btn circle {
+  stroke: var(--primary_ligth);
+}
+
+.quests__accordion__list-top:focus-visible {
+  background-color: rgba(170, 157, 250, 0.3);
+  color: var(--white);
+}
+
+
+.quests__accordion__list-top:focus-visible {
+  color: var(--white);
+}
+
+.quests__accordion__list-top:active {
+  color: var(--primary_ligth);
+}
+
+.quests__accordion__list-top.ui-state-active .quests__accordion__title {
+  color: var(--primary_ligth);
+}
+
+.quests__accordion__list-top.ui-state-active .quests__accordion__list-btn svg {
+  fill: var(--primary_ligth);
+}
+
+.quests__accordion__list-top.ui-state-active .quests__accordion__list-btn path {
+  stroke: var(--white);
+}
