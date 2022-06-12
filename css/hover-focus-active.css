@@ -59,54 +59,69 @@
   stroke: var(--primary_shade);
 }
 
-.header__top__btn {
+.btn-effect {
   transition: background-color .3s ease-in-out,
   color .3s ease-in-out;
 }
 
-.header__top__btn path {
+.btn-effect path {
   transition: stroke .3s ease-in-out;
 }
 
-.header__top__btn:hover {
+.btn-effect:hover {
   background-color: var(--black);
   color: var(--white);
 }
 
-.header__top__btn:hover path {
+.btn-effect:hover path {
   stroke: var(--white);
 }
 
-.header__top__btn:focus-visible {
+.btn-effect:focus-visible {
   background-color: var(--primary_ligth);
+  color: var(--black);
 }
 
-.header__top__btn:active {
+.btn-effect:active {
   background-color: var(--primary_shade);
   color: var(--white);
 }
 
-.header__top__btn:active path {
+.btn-effect:active path {
   stroke: var(--white);
 }
 
-.header__bottom__btn path {
-  transition: fill .3s ease-in-out;
+.header__bottom__btn  {
+  transition: background-image .3s ease-in-out;
 }
 
-.header__bottom__btn:hover path {
-  fill: var(--primary);
+.header__bottom__btn:not(.header-play-active):hover {
+  background-image: url('../img/header/btn-hover.svg');
 }
 
-.header__bottom__btn:focus-visible path {
-  fill: var(--primary_ligth);
+.header__bottom__btn:not(.header-play-active):focus-visible {
+  background-image: url('../img/header/btn-focus.svg');
 }
 
-.header__bottom__btn:active path {
-  fill: var(--primary_shade);
+.header__bottom__btn:not(.header-play-active):active {
+  background-image: url('../img/header/btn-active.svg');
 }
 
+.header__bottom__play {
+  transition: background-image .3s ease-in-out;
+}
 
+.header__bottom__play:hover {
+  background-image: url('../img/header/btn-hover.svg');
+}
+
+.header__bottom__play:focus-visible {
+  background-image: url('../img/header/btn-focus.svg');
+}
+
+.header__bottom__play:active {
+  background-image: url('../img/header/btn-active.svg');
+}
 
 /*hero*/
 .hero__btn {
@@ -142,34 +157,16 @@
   background-color: var(--primary_shade);
 }
 
-.podcasts__btn-play path,
-.podcasts__btn-play circle {
-  transition: fill .3s ease-in-out,
-  stroke .3s ease-in-out;
+.podcasts__btn-play:not(.podcasts-play-active):hover {
+  background-image: url('../img/playlists/status=hover\,\ play=yes.svg');
 }
 
-.podcasts__btn-play:hover circle {
-  stroke: var(--primary);
+.podcasts__btn-play:not(.podcasts-play-active):focus-visible {
+  background-image: url('../img/playlists/status=focus\,\ play=yes.svg');
 }
 
-.podcasts__btn-play:hover path {
-  fill: var(--primary);
-}
-
-.podcasts__btn-play:focus-visible circle {
-  stroke: var(--primary_ligth);
-}
-
-.podcasts__btn-play:focus-visible path {
-  fill: var(--primary_ligth);
-}
-
-.podcasts__btn-play:active path {
-  fill: var(--white);
-}
-
-.podcasts__btn-play:active circle {
-  fill: var(--primary);
+.podcasts__btn-play:not(.podcasts-play-active):active {
+  background-image: url('../img/playlists/status=active\,\ play=yes.svg');
 }
 
 .podcasts-effect:hover + .podcasts__descr {
@@ -205,6 +202,22 @@
 
 .podcasts-effect:active path {
   fill: var(--primary_shade);
+}
+
+.broadcast__link__left {
+  transition: color .3s ease-in-out;
+}
+
+.broadcast__link__left:hover {
+  color: var(--white);
+}
+
+.broadcast__link__left:focus-visible {
+  color: var(--white);
+}
+
+.broadcast__link__left:active {
+  color: var(--white);
 }
 
 .adv__button {
@@ -333,4 +346,28 @@
 
 .quests__accordion__list-top.ui-state-active .quests__accordion__list-btn path {
   stroke: var(--white);
+}
+
+.social-effect path {
+  transition: fill .3s ease-in-out;
+}
+
+.social-effect:hover path {
+  fill: var(--primary);
+}
+
+.social-effect:focus-visible path {
+  fill: var(--primary_ligth);
+}
+
+.social-effect:active path {
+  fill: var(--primary_shade);
+}
+
+.social-effect svg {
+  transition: transform .3s ease-in-out;
+}
+
+.social-effect:hover svg {
+  transform: scale(1.2);
 }
