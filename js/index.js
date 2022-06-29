@@ -12,7 +12,7 @@ function() {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-  const selector = document.querySelector(".choices")
+  const selector = document.querySelector(".choices");
 
   const choices = new Choices(selector, {
     searchEnabled: false,
@@ -33,7 +33,7 @@ $( function() {
  } );
 
 
- let theParent = document.querySelector('.quests__accordion');
+let theParent = document.querySelector('.quests__accordion');
  theParent.addEventListener('click', function(e) {
     let next = e.target.nextElementSibling;
     let quests = document.querySelector('.quests');
@@ -53,7 +53,8 @@ $( function() {
 
 let check = document.querySelector('.quests__accordion');
 check.addEventListener('click', function(e) {
-  if (e.target.className.includes('quests__accordion__list-top') || e.target.className.includes('quests__accordion__title')) {
+  if (e.target.className.includes('quests__accordion__list-top') || e.target.className.includes('quests__accordion__title')
+  || e.target.className.includes('quests__accordion__list-btn')) {
     if (document.querySelector('.quests-add-padding')) {
       let questsPadding = document.querySelector('.quests');
       document.querySelector('.quests__accordion-info--active').classList.remove('quests__accordion-info--active')
@@ -67,25 +68,25 @@ check.addEventListener('click', function(e) {
 
 
 new window.JustValidate('.about__form', {
-    colorWrong: '#FFFFFF',
-    rules: {
-      checkbox: {
+  colorWrong: '#FFFFFF',
+  rules: {
+    checkbox: {
+    required: true,
+    },
+  text: {
+    required: !0,
+    minLength: 5,
+    maxLength: 300,
+  },
+    name: {
       required: true,
-      },
-    text: {
-      required: !0,
-      minLength: 5,
-      maxLength: 300
+      minLength: 3,
     },
-      name: {
-        required: true,
-        minLength: 3,
-      },
-      email: {
-        required: true,
-        email: true
-      },
+    email: {
+      required: true,
+      email: true,
     },
+  },
   messages: {
         checkbox: {
           required: "Необходимо ваше согласие на обработку данных"
@@ -101,15 +102,17 @@ new window.JustValidate('.about__form', {
         },
         name: {
           required: "Ошибка",
-          minLength: "Введено менее 3 символов"
+          minLength: "Введено менее 3 символов",
+          pattern: "Введен недопустимый символ",
         }
       }
     });
 
 
+
 let burger = document.querySelector('.header__menu');
-let nav = document.querySelector('.wrapper-nav');
-let bottomList = document.querySelector(".wrapper-bottom");
+let nav = document.querySelector('.header__block-nav');
+let bottomList = document.querySelector(".header__bottom__tablet");
 burger.addEventListener('click', burgerOpen, false);
 function burgerOpen(e) {
   burger.classList.toggle('menu');
@@ -120,8 +123,8 @@ function burgerOpen(e) {
 let menu_links = document.querySelectorAll(".header__top__link");
 menu_links.forEach(function(el) {
   el.addEventListener('click', function() {
-    document.querySelector(".wrapper-nav").classList.remove("active");
-    document.querySelector('.wrapper-bottom').classList.toggle('active-2');
+    document.querySelector(".header__block-nav").classList.remove("active");
+    document.querySelector('.header__bottom__tablet').classList.toggle('active-2');
     burger.classList.remove('menu');
   })
 })
@@ -135,7 +138,7 @@ function playOpenOne(e) {
 
 let mobileBtn = document.querySelector('.header__mobile__btn');
 let headerBottomPlay = document.querySelector('.header__bottom__block');
-let headerBottom = document.querySelector('.header-bottom')
+let headerBottom = document.querySelector('.header-content')
 let headerTransform = document.querySelector('.header__mobile')
 mobileBtn.addEventListener('click', playOpen, false);
 function playOpen(e) {
@@ -195,8 +198,8 @@ function headerPlay(e){
     e.target.classList.toggle('header-play-active');
   }
 
-  else if (e.target.className.includes('header__bottom__btn')) {
-    document.querySelectorAll('.header__bottom__btn').forEach(function(btnTwo){
+  else if (e.target.className.includes('header__block__btn')) {
+    document.querySelectorAll('.header__block__btn').forEach(function(btnTwo){
       btnTwo.classList.remove('header-play-active');
 
     })
@@ -204,3 +207,22 @@ function headerPlay(e){
     e.target.style
   }
 }
+
+const container = document.querySelector(".about__container");
+let currentScreen;
+if (screen.width > 1366) {
+  currentSlide = 4;
+}
+else if (screen.width <= 1366) {
+  currentSlide = 2
+}
+
+const swiper = new Swiper('.about__list', {
+  speed: 300,
+  spaceBetween: 30,
+  slidesPerView: currentSlide,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+    },
+})
