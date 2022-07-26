@@ -33,39 +33,39 @@ $( function() {
  } );
 
 
-let theParent = document.querySelector('.quests__accordion');
- theParent.addEventListener('click', function(e) {
-    let next = e.target.nextElementSibling;
-    let quests = document.querySelector('.quests');
-    if (next) {
-      if (next.className == 'quests__accordion-info') {
-        document.querySelectorAll('.quests__accordion-info').forEach(function(btn){
-          btn.classList.remove('quests__accordion-info--active')
-        });
-        next.classList.add('quests__accordion-info--active');
-        if (screen.width <= 992) {
-          quests.classList.add('quests-add-padding')
-        };
-      };
-    };
- });
-
-
-let check = document.querySelector('.quests__accordion');
-check.addEventListener('click', function(e) {
-  if (e.target.className.includes('quests__accordion__list-top') || e.target.className.includes('quests__accordion__title')
-  || e.target.className.includes('quests__accordion__list-btn')) {
+ let iconPhoto = document.querySelector('.quests__photo');
+let check = document.querySelectorAll('.quests__accordion__list-top');
+for (let i = 0; i < check.length; ++i) {
+  check[i].addEventListener('click', function(el){
     if (document.querySelector('.quests-add-padding')) {
       let questsPadding = document.querySelector('.quests');
       document.querySelector('.quests__accordion-info--active').classList.remove('quests__accordion-info--active')
       questsPadding.classList.remove('quests-add-padding');
+      iconPhoto.classList.remove('quests__photo__hide');
     }
     else if (document.querySelector('.quests__accordion-info--active')){
-      document.querySelector('.quests__accordion-info--active').classList.remove('quests__accordion-info--active')
+      document.querySelector('.quests__accordion-info--active').classList.remove('quests__accordion-info--active');
     }
-  }
-});
+  });
+}
 
+
+elm = document.querySelectorAll('.quests__accordion__button');
+for (let i = 0; i < elm.length; ++i) {
+  elm[i].addEventListener('click', function(el){
+    next = el.target.nextElementSibling;
+    if (next){
+      document.querySelectorAll('.quests__accordion-info').forEach(function(btn){
+        btn.classList.remove('quests__accordion-info--active')});
+      next.classList.add('quests__accordion-info--active');
+      iconPhoto.classList.add('quests__photo__hide');
+      if (screen.width <= 4000) {
+        let quests = document.querySelector('.quests');
+        quests.classList.add('quests-add-padding');
+      }
+    }
+  });
+}
 
 new window.JustValidate('.about__form', {
   colorWrong: '#FFFFFF',
@@ -79,8 +79,15 @@ new window.JustValidate('.about__form', {
     maxLength: 300,
   },
     name: {
-      required: true,
+      required: !0,
       minLength: 3,
+      function: (value, name) => {
+        re = /^[a-zA-ZА-Яа-я0-9_-\s+]{3,16}$/
+        let result = re.test(name)
+        if (result) {
+          return result;
+        }
+      }
     },
     email: {
       required: true,
@@ -101,13 +108,13 @@ new window.JustValidate('.about__form', {
           email: "Не введено нужного символа"
         },
         name: {
+          function: "Недопустимые символы!",
           required: "Ошибка",
           minLength: "Введено менее 3 символов",
           pattern: "Введен недопустимый символ",
-        }
       }
-    });
-
+   }
+});
 
 
 let burger = document.querySelector('.header__menu');
@@ -176,53 +183,59 @@ document.addEventListener("click", function(e) {
   }
 })
 
-
-let playPodcasts = document.querySelector('.podcasts__list');
-playPodcasts.addEventListener('click', playOpenTwo, false);
-function playOpenTwo(e) {
-  if (e.target.className.includes('podcasts__btn-play') && e.target.className.includes('podcasts-play-active')) {
-    e.target.classList.toggle('podcasts-play-active');
-  }
-  else if (e.target.className.includes('podcasts__btn-play')) {
-    document.querySelectorAll('.podcasts__btn-play').forEach(function(btnTwo){
-      btnTwo.classList.remove('podcasts-play-active');
-    })
-    e.target.classList.add('podcasts-play-active');
-  }
+let playPodcasts = document.querySelectorAll('.podcasts__btn-play');
+for (let i = 0; i < playPodcasts.length; ++i) {
+  playPodcasts[i].addEventListener('click', function(){
+    if (playPodcasts[i].className.includes('podcasts__btn-play') && playPodcasts[i].className.includes('podcasts-play-active')) {
+      playPodcasts[i].classList.toggle('podcasts-play-active');
+    }
+    else if (playPodcasts[i].className.includes('podcasts__btn-play')){
+      document.querySelectorAll('.podcasts__btn-play').forEach(function(btn) {
+        btn.classList.remove('podcasts-play-active');
+      })
+      playPodcasts[i].classList.add('podcasts-play-active');
+    }
+  });
 }
 
-let headerBtn = document.querySelector('.header__bottom__block');
-headerBtn.addEventListener('click', headerPlay, false);
-function headerPlay(e){
-  if (e.target.className.includes('header-play-active') && e.target.className.includes('header-play-active')) {
-    e.target.classList.toggle('header-play-active');
-  }
 
-  else if (e.target.className.includes('header__block__btn')) {
-    document.querySelectorAll('.header__block__btn').forEach(function(btnTwo){
-      btnTwo.classList.remove('header-play-active');
-
-    })
-    e.target.classList.add('header-play-active');
-    e.target.style
-  }
+let headerBtn = document.querySelectorAll('.header__block__btn');
+for (let i = 0; i < headerBtn.length; ++i) {
+  headerBtn[i].addEventListener('click', function(){
+    if (headerBtn[i].className.includes('header__block__btn') && headerBtn[i].className.includes('header-play-active')) {
+      headerBtn[i].classList.toggle('header-play-active');
+    }
+    else if (headerBtn[i].className.includes('header__block__btn')){
+      document.querySelectorAll('.header__block__btn').forEach(function(btn) {
+        btn.classList.remove('header-play-active');
+      })
+      headerBtn[i].classList.add('header-play-active');
+    }
+  });
 }
 
 const container = document.querySelector(".about__container");
-let currentScreen;
-if (screen.width > 1366) {
-  currentSlide = 4;
-}
-else if (screen.width <= 1366) {
-  currentSlide = 2
-}
 
 const swiper = new Swiper('.about__list', {
   speed: 300,
-  spaceBetween: 30,
-  slidesPerView: currentSlide,
+  spaceBetween: 20,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
     },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 2.3,
+      spaceBetween: 20,
+    },
+    360: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    1025: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+    },
+  }
 })

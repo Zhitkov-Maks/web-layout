@@ -15,545 +15,614 @@
   --promo_color_shade: #BB973E;
 }
 
-.nav-effect {
-  transition: color .3s ease-in-out,
-  background-color .3s ease-in-out;
+@media (min-width: 1200px) {
+  .nav-effect:hover path {
+    fill: var(--primary);
+  }
+
+  .nav-effect:focus-visible path {
+    fill: var(--white);
+    background-color: var(--primary_ligth);
+  }
+
+  .nav-effect:hover {
+    color: var(--primary);
+  }
+
+  .nav-effect:focus-visible {
+    color: white;
+    background-color: var(--primary_ligth);
+  }
+
+  .header__top__btn-searth path {
+    transition: stroke .3s ease-in-out;
+  }
+
+  .header__form__btn path {
+    transition: stroke .3s ease-in-out;
+  }
+
+  .header__form__btn:hover path {
+    stroke: var(--primary_ligth);
+  }
+
+  .header__form__btn:focus-visible path {
+    stroke: var(--primary_ligth);
+  }
+
+  .header__form__btn:active path {
+    stroke: var(--primary_shade);
+  }
+
+  .header__top__btn-searth:hover path,
+  .header__top__btn-searth:focus-visible path {
+    stroke: var(--primary_ligth);
+  }
+
+  .header__top__btn-searth:active path {
+    stroke: var(--primary_shade);
+  }
+
+  .btn-effect {
+    transition: background-color .3s ease-in-out,
+    color .3s ease-in-out;
+  }
+
+  .btn-effect path {
+    transition: stroke .3s ease-in-out;
+  }
+
+  .btn-effect:hover {
+    background-color: var(--black);
+    color: var(--white);
+  }
+
+  .btn-effect:hover path {
+    stroke: var(--white);
+  }
+
+  .btn-effect:focus-visible {
+    background-color: var(--primary_ligth);
+    color: var(--black);
+  }
+
+  .btn-effect:active {
+    background-color: var(--primary_shade);
+    color: var(--white);
+  }
+
+  .btn-effect:active path {
+    stroke: var(--white);
+  }
+
+  .header__block__btn path {
+    transition: fill .3s ease-in-out;
+  }
+
+  .header__block__btn:not(.header-play-active):hover path {
+    fill: var(--primary);
+  }
+
+  .header__block__btn:not(.header-play-active):focus-visible path {
+    fill: var(--primary_ligth);
+  }
+
+  .header__block__btn:not(.header-play-active):active path {
+    fill: var(--primary_shade);
+  }
+
+  .header__block__btn:not(.header-play-active):focus-visible {
+    background-image: url('../img/header/btn-focus.svg');
+  }
+
+  .header__block__btn:not(.header-play-active):active {
+    background-image: url('../img/header/btn-active.svg');
+  }
+
+  .header__bottom__play {
+    transition: background-image .3s ease-in-out;
+  }
+
+  .header__bottom__play:not(.play-active):hover {
+    background-image: url('../img/header/btn-hover.svg');
+  }
+
+  .header__bottom__play:not(.play-active):focus-visible {
+    background-image: url('../img/header/btn-focus.svg');
+  }
+
+  .header__bottom__play:not(.play-active):active {
+    background-image: url('../img/header/btn-active.svg');
+  }
+
+  /*hero*/
+  .hero-btn {
+    transition: background-color .3s ease-in-out;
+  }
+
+  .hero-btn:hover,
+  .hero-btn:focus-visible {
+    background-color: var(--primary_ligth);
+  }
+
+  .hero-btn:active {
+    background-color: var(--primary_shade);
+  }
+
+
+  /*podcasts*/
+  .podcasts__button:before {
+    transition: background-color .3s ease-in-out,
+    color .3s ease-in-out;
+  }
+
+  .podcasts__button:hover:before {
+    background-color: var(--primary);
+    color: var(--white);
+  }
+
+  .podcasts__button:focus-visible:before {
+    background-color: var(--primary_ligth);
+  }
+
+  .podcasts__button:active:before {
+    background-color: var(--primary_shade);
+  }
+
+  .podcasts__btn-play circle,
+  .podcasts__btn-play path {
+    transition: stroke .3s ease-in-out,
+    fill .3s ease-in-out;
+  }
+
+  .podcasts__btn-play:not(.podcasts-play-active):hover circle {
+    stroke: var(--primary);
+  }
+
+  .podcasts__btn-play:not(.podcasts-play-active):hover path {
+    fill: var(--primary);
+  }
+
+  .podcasts__btn-play:not(.podcasts-play-active):focus-visible circle {
+    stroke: var(--primary_ligth);
+  }
+
+  .podcasts__btn-play:not(.podcasts-play-active):focus-visible path {
+    fill: var(--primary_ligth);
+  }
+
+  .podcasts__btn-play:not(.podcasts-play-active):active path {
+    fill: var(--white);
+  }
+
+  .podcasts__btn-play:not(.podcasts-play-active):active circle {
+    fill: var(--primary_shade);
+  }
+
+
+  .podcasts-effect:hover + .podcasts__descr {
+    transition: color .3s ease-in-out;
+  }
+  .podcasts-effect path {
+    transition: fill .3s ease-in-out;
+  }
+  .podcasts-effect {
+    transition: color .3s ease-in-out;
+  }
+
+  .podcasts-effect:hover path {
+    fill: var(--primary);
+  }
+
+  *.podcasts-effect:hover {
+    color: var(--primary);
+  }
+
+  .podcasts-effect:focus-visible {
+    background-color: var(--primary_ligth);
+    color: var(--white);
+  }
+
+  .podcasts-effect:focus-visible path {
+    fill: var(--white);
+  }
+
+  .podcasts-effect:active {
+    color: var(--primary_shade);
+  }
+
+  .podcasts-effect:active path {
+    fill: var(--primary_shade);
+  }
+
+  .podcasts-button-click .podcasts__descr{
+    transition: color .3s ease-out;
+  }
+
+  .podcasts-button-click:hover .podcasts__descr{
+    color: #6D31EE;
+  }
+
+  .podcasts-button-click:focus-visible .podcasts__descr{
+    color: var(--white);
+  }
+
+  .header_choices .choices__inner {
+    transition: background-color .3s ease-in-out;
+  }
+
+  .header_choices .choices__inner:hover {
+    background-color: var(--ligth_color_40);
+  }
+
+  .header_choices .choices__inner:focus-visible {
+    background-color: var(--lite_color);
+  }
+
+  .header_choices .choices__inner:active {
+    background-color: var(--shade_gray);
+  }
+
+  .adv__button {
+    transition: color .3s ease-in-out,
+    background-color .3s ease-in-out;
+  }
+  .adv__button path {
+    transition: fill .3s ease-in-out;
+  }
+
+
+  .adv__button:hover {
+    color: var(--black);
+    background-color: var(--promo_color);
+  }
+
+  .adv__button:hover path:first-child {
+    fill: var(--black);
+  }
+
+  .adv__button:hover path:last-child {
+    fill: var(--white);
+  }
+
+  .adv__button:focus-visible {
+    color: var(--black);
+    background-color: var(--promo_color_shade);
+  }
+
+  .adv__button:active {
+    color: var(--black);
+    background-color: var(--promo_color_shade);
+  }
+
+  .adv__button:active path:first-child {
+    fill: var(--black);
+  }
+
+  .adv__button:active path:last-child {
+    fill: var(--white);
+  }
+
+  .about__form-input {
+    transition: background-color .3s ease-in-out;
+  }
+
+  .about__form-input:hover {
+    background-color: rgba(230, 232, 236, 0.1);
+  }
+
+  .about__form-input:focus-visible {
+    background-color: rgba(230, 232, 236, 0.1);
+  }
+
+  .about__form-input:active {
+    background-color: var(--black)
+  }
+
+  .quests__accordion__link {
+    transition: color .3s ease-in-out,
+    background-color .3s ease-in-out;
+  }
+
+  .quests__accordion__link:hover {
+    color: var(--white);
+    background-color: var(--primary_ligth);
+  }
+
+  .quests__accordion__link:focus-visible {
+    color: var(--white);
+    background-color: var(--primary);
+  }
+
+  .quests__accordion__link:active {
+    color: var(--white);
+    background-color: var(--primary_shade);
+  }
+
+  .quests__accordion__list-top {
+    transition: color .3s ease-in-out,
+    background-color .3s ease-in-out;
+  }
+
+  .quests__accordion__list-top.ui-state-active .quests__accordion__title {
+    transition: color .3s ease-in-out;
+  }
+
+  .quests__accordion__list-top:hover {
+    color: var(--primary_ligth);
+  }
+
+  .quests__accordion__list-top:focus-visible {
+    background-color: rgba(170, 157, 250, 0.3);
+    color: var(--white);
+  }
+
+  .quests__accordion__list-top:active {
+    color: var(--primary_ligth);
+  }
+
+  .quests__accordion__list-top .quests__accordion__list-btn circle,
+  .quests__accordion__list-top .quests__accordion__list-btn path {
+    transition: stroke .3s ease-in-out;
+  }
+
+  .quests__accordion__list-top:active .quests__accordion__list-btn svg ,
+  .quests__accordion__list-top .quests__accordion__list-btn path  {
+    transition: fill 1.3s ease-in-out, stroke .3s ease-in-out
+  }
+
+  .quests__accordion__list-top:hover:not(:active) .quests__accordion__list-btn circle,
+  .quests__accordion__list-top:hover:not(:active) .quests__accordion__list-btn path {
+    stroke: var(--primary_ligth);
+  }
+
+  .quests__accordion__list-top:focus-visible .quests__accordion__list-btn circle,
+  .quests__accordion__list-top:focus-visible .quests__accordion__list-btn path {
+    stroke: #A1A6B4;
+  }
+
+  .quests__accordion__list-top:active .quests__accordion__list-btn path {
+    stroke: #FFFFFF;
+  }
+
+  .quests__accordion__list-top:active .quests__accordion__list-btn svg  {
+    fill: #AA9DFA;
+  }
+
+  .quests__accordion__list-top.ui-state-active .quests__accordion__title {
+    color: var(--primary_ligth);
+  }
+
+  .social-effect path {
+    transition: fill .3s ease-in-out;
+  }
+
+  .social-effect:hover path {
+    fill: var(--primary);
+  }
+
+  .social-effect:focus-visible path {
+    fill: var(--primary_ligth);
+  }
+
+  .social-effect:active path {
+    fill: var(--primary_shade);
+  }
+
+  .social-effect svg {
+    transition: transform .3s ease-in-out;
+  }
+
+  .social-effect:hover svg {
+    transform: scale(1.2);
+  }
+
+  .social-effect:focus-visible svg {
+    transform: scale(1.2);
+  }
+
+  .choices__list--dropdown .choices__item--selectable.is-highlighted:hover {
+    background-color: var(--ligth_color_40);
+  }
+
+  .choices__list--dropdown .choices__item--selectable.is-highlighted:active {
+    background-color: var(--white);
+  }
+
+  .choices__list--dropdown .choices__item--selectable.is-highlighted {
+    transition: backgroud-color .3s ease-in-out;
+    background-color: var(--primary_ligth);
+  }
+
+  .check-text:before {
+    transition: border-color .3s ease-in-out;
+  }
+
+  .check-text:hover:before {
+    border-color: var(--primary);
+  }
+
+
+  .checkbox:focus-visible ~ .check-text:before {
+    border: none;
+    background-image: url("../img/checkbox-focus.svg");
+    transition: background-image .3s ease-in-out;
+  }
+
+  .broadcast__link:before {
+    transition: background-color .3s ease-in-out;
+    outline: 1px solid red;
+    outline-offset: 3px;
+    opacity: 0;
+  }
+
+  .broadcast__link:focus-visible:not(:hover):before {
+    transition: opacity .3s ease-in-out;
+    opacity: 1;
+  }
+
+  .broadcast__item__content:before {
+    transition: opacity .3s ease-in-out;
+  }
+
+  .broad1:hover:before {
+    background-image: url("../img/broadcasts/broad-1.png");
+    opacity: 0.7;
+  }
+
+  .broad2:hover:before {
+    background-image: url("../img/broadcasts/broad-2.png");
+    opacity: .7;
+  }
+
+  .broad3:hover:before {
+    background-image: url("../img/broadcasts/broad-3.png");
+    opacity: .7;
+  }
+
+  .broad4:hover:before {
+    background-image: url("../img/broadcasts/broad-4.png");
+    opacity: .7;
+  }
+
+  .broad5:hover:before {
+    background-image: url("../img/broadcasts/broad-5.png");
+    opacity: .7;
+  }
+
+  .broad6:hover:before {
+    background-image: url("../img/broadcasts/broad-6.png");
+    opacity: .7;
+  }
+
+  .broad1:active:before {
+    background-image: url("../img/broadcasts/broad-1.png");
+    opacity: 0.7;
+  }
+
+  .broad2:active:before {
+    background-image: url("../img/broadcasts/broad-2.png");
+    opacity: .7;
+  }
+
+  .broad3:active:before {
+    background-image: url("../img/broadcasts/broad-3.png");
+    opacity: .7;
+  }
+
+  .broad4:active:before {
+    background-image: url("../img/broadcasts/broad-4.png");
+    opacity: .7;
+  }
+
+  .broad5:active:before {
+    background-image: url("../img/broadcasts/broad-5.png");
+    opacity: .7;
+  }
+
+  .broad6:active:before {
+    background-image: url("../img/broadcasts/broad-6.png");
+    opacity: .7;
+  }
+
+  .playlists__block__link:after {
+    transition: opacity .3s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-image: url("../img/playlists-play_btn.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+  }
+
+  .playlists__block__link:hover:after {
+    opacity: 1;
+  }
+
+  .playlists__block__link:focus-visible:after {
+    opacity: 1;
+  }
+
+  .playlists__block__link {
+    transition: background-color .3s ease-in-out;
+  }
+
+  .playlists__block__link .playlists__block__content {
+    transition: background-color .3s ease-in-out,
+    border .3s ease-in-out;;
+  }
+
+  .playlists__block__link:hover .playlists__block__content {
+    background-color: var(--primary);
+    border-color: var(--primary);
+  }
+
+  .playlists__block__link:hover .playlists__block__title {
+    color: var(--white);
+    transition: color .3s ease-in-out;
+  }
+
+  .playlists__block__link:hover .playlists__block__descr {
+    color: var(--white);
+    transition: color .3s ease-in-out;
+  }
+
+  .playlists__block__link:focus-visible .playlists__block__content {
+    background-color: var(--primary_ligth);
+    border-color: var(--primary_ligth);
+    transition: background-color .3s ease-in-out,
+    border .3s ease-in-out;
+  }
+
+  .playlists__block__link:focus-visible .playlists__block__title {
+    color: var(--black);
+    transition: color .3s ease-in-out;
+  }
+
+  .playlists__block__link:focus-visible .playlists__block__descr {
+    color: var(--black);
+    transition: color .3s ease-in-out;
+  }
+
+  .playlists__block__link:active .playlists__block__content {
+    background-color: var(--primary_shade);
+    border-color: var(--primary_shade);
+    transition: background-color .3s ease-in-out,
+    border .3s ease-in-out;
+  }
+
+  .playlists__block__link:active .playlists__block__title {
+    color: var(--white);
+    transition: color .3s ease-in-out;
+  }
+
+  .playlists__block__link:active .playlists__block__descr {
+    color: var(--white);
+    transition: color .3s ease-in-out;
+  }
+
+  .swiper-button-next {
+    transition: transform .2s ease-in-out;
+    padding: 10px;
+  }
+
+  .swiper-button-next:hover {
+    transform: scale(1.1);
+  }
+
+  .swiper-button-prev {
+    padding: 2px;
+    transition: transform .2s ease-in-out;
+  }
+
+  .swiper-button-prev:hover {
+    transform: scale(1.1);
+  }
+
+  .swiper-button-next:focus-visible {
+    transform: scale(1.1);
+  }
+
+  .swiper-button-prev:focus-visible {
+    transform: scale(1.1);
+  }
 }
-
-.nav-effect path {
-  transition: fill .3s ease-in-out;
-}
-
-.nav-effect:hover path {
-  fill: var(--primary);
-}
-
-.nav-effect:focus-visible path {
-  fill: var(--white);
-  background-color: var(--primary_ligth);
-}
-
-.nav-effect:hover {
-  color: var(--primary);
-}
-
-.nav-effect:focus-visible {
-  color: white;
-  background-color: var(--primary_ligth);
-}
-
-.nav-effect:active {
-  color: var(--primary_shade);
-}
-
-.header__top__btn-searth path {
-  transition: stroke .3s ease-in-out;
-}
-
-.header__form__btn path {
-  transition: stroke .3s ease-in-out;
-}
-
-.header__form__btn:hover path {
-  stroke: var(--primary_ligth);
-}
-
-.header__form__btn:focus-visible path {
-  stroke: var(--primary_ligth);
-}
-
-.header__form__btn:active path {
-  stroke: var(--primary_shade);
-}
-
-.header__top__btn-searth:hover path,
-.header__top__btn-searth:focus-visible path {
-  stroke: var(--primary_ligth);
-}
-
-.header__top__btn-searth:active path {
-  stroke: var(--primary_shade);
-}
-
-.btn-effect {
-  transition: background-color .3s ease-in-out,
-  color .3s ease-in-out;
-}
-
-.btn-effect path {
-  transition: stroke .3s ease-in-out;
-}
-
-.btn-effect:hover {
-  background-color: var(--black);
-  color: var(--white);
-}
-
-.btn-effect:hover path {
-  stroke: var(--white);
-}
-
-.btn-effect:focus-visible {
-  background-color: var(--primary_ligth);
-  color: var(--black);
-}
-
-.btn-effect:active {
-  background-color: var(--primary_shade);
-  color: var(--white);
-}
-
-.btn-effect:active path {
-  stroke: var(--white);
-}
-
-.header__block__btn  {
-  transition: background-image .3s ease-in-out;
-}
-
-.header__block__btn:not(.header-play-active):hover {
-  background-image: url('../img/header/btn-hover.svg');
-}
-
-.header__block__btn:not(.header-play-active):focus-visible {
-  background-image: url('../img/header/btn-focus.svg');
-}
-
-.header__block__btn:not(.header-play-active):active {
-  background-image: url('../img/header/btn-active.svg');
-}
-
-.header__bottom__play. {
-  transition: background-image .3s ease-in-out;
-}
-
-.header__bottom__play:not(.play-active):hover {
-  background-image: url('../img/header/btn-hover.svg');
-}
-
-.header__bottom__play:not(.play-active):focus-visible {
-  background-image: url('../img/header/btn-focus.svg');
-}
-
-.header__bottom__play:not(.play-active):active {
-  background-image: url('../img/header/btn-active.svg');
-}
-
-/*hero*/
-.hero__btn {
-  transition: background-color .3s ease-in-out;
-}
-
-.hero__btn:hover,
-.hero__btn:focus-visible {
-  background-color: var(--primary_ligth);
-}
-
-.hero__btn:active {
-  background-color: var(--primary_shade);
-}
-
-
-/*podcasts*/
-.podcasts__button:before {
-  transition: background-color .3s ease-in-out,
-  color .3s ease-in-out;
-}
-
-.podcasts__button:hover:before {
-  background-color: var(--primary);
-  color: var(--white);
-}
-
-.podcasts__button:focus-visible:before {
-  background-color: var(--primary_ligth);
-}
-
-.podcasts__button:active:before {
-  background-color: var(--primary_shade);
-}
-
-.podcasts__btn-play:not(.podcasts-play-active):hover {
-  background-image: url('../img/playlists/status=hover\,\ play=yes.svg');
-}
-
-.podcasts__btn-play:not(.podcasts-play-active):focus-visible {
-  background-image: url('../img/playlists/status=focus\,\ play=yes.svg');
-}
-
-.podcasts__btn-play:not(.podcasts-play-active):active {
-  background-image: url('../img/playlists/status=active\,\ play=yes.svg');
-}
-
-.podcasts-effect:hover + .podcasts__descr {
-  transition: color .3s ease-in-out;
-}
-.podcasts-effect path {
-  transition: fill .3s ease-in-out;
-}
-.podcasts-effect {
-  transition: color .3s ease-in-out;
-}
-
-.podcasts-effect:hover path {
-  fill: var(--primary);
-}
-
-*.podcasts-effect:hover {
-  color: var(--primary);
-}
-
-.podcasts-effect:focus-visible {
-  background-color: var(--primary_ligth);
-  color: var(--white);
-}
-
-.podcasts-effect:focus-visible path {
-  fill: var(--white);
-}
-
-.podcasts-effect:active {
-  color: var(--primary_shade);
-}
-
-.podcasts-effect:active path {
-  fill: var(--primary_shade);
-}
-
-.header_choices .choices__inner {
-  transition: background-color .3s ease-in-out;
-}
-
-.header_choices .choices__inner:hover {
-  background-color: var(--ligth_color_40);
-}
-
-.header_choices .choices__inner:focus-visible {
-  background-color: var(--lite_color);
-}
-
-.header_choices .choices__inner:active {
-  background-color: var(--shade_gray);
-}
-
-.adv__button {
-  transition: color .3s ease-in-out,
-  background-color .3s ease-in-out;
-}
-.adv__button path {
-  transition: fill .3s ease-in-out;
-}
-
-
-.adv__button:hover {
-  color: var(--black);
-  background-color: var(--promo_color);
-}
-
-.adv__button:hover path:first-child {
-  fill: var(--black);
-}
-
-.adv__button:hover path:last-child {
-  fill: var(--white);
-}
-
-.adv__button:focus-visible {
-  color: var(--black);
-  background-color: var(--promo_color_shade);
-}
-
-.adv__button:active {
-  color: var(--black);
-  background-color: var(--promo_color_shade);
-}
-
-.adv__button:active path:first-child {
-  fill: var(--black);
-}
-
-.adv__button:active path:last-child {
-  fill: var(--white);
-}
-
-.about__form-input {
-  transition: background-color .3s ease-in-out;
-}
-
-.about__form-input:hover {
-  background-color: rgba(230, 232, 236, 0.1);
-}
-
-.about__form-input:focus-visible {
-  background-color: rgba(230, 232, 236, 0.1);
-}
-
-.about__form-input:active {
-  background-color: var(--black)
-}
-
-.quests__accordion__link {
-  transition: color .3s ease-in-out,
-  background-color .3s ease-in-out;
-}
-
-.quests__accordion__link:hover {
-  color: var(--white);
-  background-color: var(--primary_ligth);
-}
-
-.quests__accordion__link:focus-visible {
-  color: var(--white);
-  background-color: var(--primary);
-}
-
-.quests__accordion__link:active {
-  color: var(--white);
-  background-color: var(--primary_shade);
-}
-
-.quests__accordion__list-top {
-  transition: color .3s ease-in-out,
-  background-color .3s ease-in-out;
-}
-
-.quests__accordion__list-top.ui-state-active .quests__accordion__title {
-  transition: color .3s ease-in-out;
-}
-
-.quests__accordion__list-top:hover {
-  color: var(--primary_ligth);
-}
-
-.quests__accordion__list-top:focus-visible {
-  background-color: rgba(170, 157, 250, 0.3);
-  color: var(--white);
-}
-
-.quests__accordion__list-top:focus-visible .quests__accordion__list-btn {
-  background-image: url('../img/quests/accordion--btn.svg');
-}
-
-.quests__accordion__list-top:hover .quests__accordion__list-btn {
-  background-image: url('../img/quests/accordion--btn--hover.svg');
-}
-
-.quests__accordion__list-top:active .quests__accordion__list-btn {
-  background-image: url('../img/quests/accordion--btn--active.svg');
-}
-
-.quests__accordion__list-top:active {
-  color: var(--primary_ligth);
-}
-
-.quests__accordion__list-top.ui-state-active .quests__accordion__title {
-  color: var(--primary_ligth);
-}
-
-.social-effect path {
-  transition: fill .3s ease-in-out;
-}
-
-.social-effect:hover path {
-  fill: var(--primary);
-}
-
-.social-effect:focus-visible path {
-  fill: var(--primary_ligth);
-}
-
-.social-effect:active path {
-  fill: var(--primary_shade);
-}
-
-.social-effect svg {
-  transition: transform .3s ease-in-out;
-}
-
-.social-effect:hover svg {
-  transform: scale(1.2);
-}
-
-.social-effect:focus-visible svg {
-  transform: scale(1.2);
-}
-
-.choices__list--dropdown .choices__item--selectable.is-highlighted:hover {
-  background-color: var(--ligth_color_40);
-}
-
-.choices__list--dropdown .choices__item--selectable.is-highlighted {
-  transition: backgroud-color .3s ease-in-out;
-  background-color: var(--white);
-}
-
-.choices__list--dropdown .choices__item--selectable:focus {
-  background-color: var(--primary_ligth);
-}
-
-
-.choices__list--dropdown .choices__item--selectable.is-highlighted:active {
-  background-color: var(--lite_color);
-}
-
-.check-text:before {
-  transition: border-color .3s ease-in-out;
-}
-
-.check-text:hover:before {
-  border-color: var(--primary);
-}
-
-.check-text:focus-visible:before {
-  border-color: var(--primary);
-  background-color: var(--shade_gray);
-}
-
-.broadcast__link:before {
-  transition: background-color .3s ease-in-out;
-  outline: 1px solid red;
-  outline-offset: 3px;
-  opacity: 0;
-}
-
-.broadcast__link:focus-visible:not(:hover):before {
-  transition: opacity .3s ease-in-out;
-  opacity: 1;
-}
-
-.broadcast__item__content:before {
-  transition: opacity .3s ease-in-out;
-}
-
-.broad1:hover:before {
-  background-image: url("../img/broadcasts/broad-1.png");
-  opacity: 0.7;
-}
-
-.broad2:hover:before {
-  background-image: url("../img/broadcasts/broad-2.png");
-  opacity: .7;
-}
-
-.broad3:hover:before {
-  background-image: url("../img/broadcasts/broad-3.png");
-  opacity: .7;
-}
-
-.broad4:hover:before {
-  background-image: url("../img/broadcasts/broad-4.png");
-  opacity: .7;
-}
-
-.broad5:hover:before {
-  background-image: url("../img/broadcasts/broad-5.png");
-  opacity: .7;
-}
-
-.broad6:hover:before {
-  background-image: url("../img/broadcasts/broad-6.png");
-  opacity: .7;
-}
-
-.broad1:active:before {
-  background-image: url("../img/broadcasts/broad-1.png");
-  opacity: 0.7;
-}
-
-.broad2:active:before {
-  background-image: url("../img/broadcasts/broad-2.png");
-  opacity: .7;
-}
-
-.broad3:active:before {
-  background-image: url("../img/broadcasts/broad-3.png");
-  opacity: .7;
-}
-
-.broad4:active:before {
-  background-image: url("../img/broadcasts/broad-4.png");
-  opacity: .7;
-}
-
-.broad5:active:before {
-  background-image: url("../img/broadcasts/broad-5.png");
-  opacity: .7;
-}
-
-.broad6:active:before {
-  background-image: url("../img/broadcasts/broad-6.png");
-  opacity: .7;
-}
-
-.playlists__block__link:after {
-  transition: opacity .3s ease-in-out;
-  background-color: rgba(0, 0, 0, 0.8);
-  background-image: url("../img/playlists-play_btn.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0;
-}
-
-.playlists__block__link:hover:after {
-  opacity: 1;
-}
-
-.playlists__block__link:focus-visible:after {
-  opacity: 1;
-}
-
-.playlists__block__link {
-  transition: background-color .3s ease-in-out;
-}
-
-.playlists__block__link:hover .playlists__block__content {
-  background-color: var(--primary);
-  border-color: var(--primary);
-  transition: background-color .3s ease-in-out,
-  border .3s ease-in-out;
-}
-
-.playlists__block__link:hover .playlists__block__title {
-  color: var(--white);
-  transition: color .3s ease-in-out;
-}
-
-.playlists__block__link:hover .playlists__block__descr {
-  color: var(--white);
-  transition: color .3s ease-in-out;
-}
-
-.playlists__block__link:focus-visible .playlists__block__content {
-  background-color: var(--primary_ligth);
-  border-color: var(--primary_ligth);
-  transition: background-color .3s ease-in-out,
-  border .3s ease-in-out;
-}
-
-.playlists__block__link:focus-visible .playlists__block__title {
-  color: var(--black);
-  transition: color .3s ease-in-out;
-}
-
-.playlists__block__link:focus-visible .playlists__block__descr {
-  color: var(--black);
-  transition: color .3s ease-in-out;
-}
-
-.playlists__block__link:active .playlists__block__content {
-  background-color: var(--primary_shade);
-  border-color: var(--primary_shade);
-  transition: background-color .3s ease-in-out,
-  border .3s ease-in-out;
-}
-
-.playlists__block__link:active .playlists__block__title {
-  color: var(--white);
-  transition: color .3s ease-in-out;
-}
-
-.playlists__block__link:active .playlists__block__descr {
-  color: var(--white);
-  transition: color .3s ease-in-out;
-}
-
