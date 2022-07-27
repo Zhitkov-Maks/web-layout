@@ -2056,7 +2056,9 @@ button:focus-visible {
 }
 
 .form-checkbox {
-  display: none;
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .check-box:before {
@@ -2067,7 +2069,7 @@ button:focus-visible {
 
   width: 14px;
   height: 14px;
-
+  cursor: pointer;
   border: 1px solid var(--white);
 }
 
