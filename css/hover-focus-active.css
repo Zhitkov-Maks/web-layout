@@ -263,43 +263,43 @@
     background-color: var(--shade_gray);
   }
 
-  .adv__button {
+  .adv__link {
     transition: color .3s ease-in-out,
     background-color .3s ease-in-out;
   }
-  .adv__button path {
+  .adv__link path {
     transition: fill .3s ease-in-out;
   }
 
 
-  .adv__button:hover {
+  .adv__link:hover {
     color: var(--black);
     background-color: var(--promo_color);
   }
 
-  .adv__button:hover path:first-child {
+  .adv__link:hover path:first-child {
     fill: var(--black);
   }
 
-  .adv__button:hover path:last-child {
+  .adv__link:hover path:last-child {
     fill: var(--white);
   }
 
-  .adv__button:focus-visible {
+  .adv__link:focus-visible {
     color: var(--black);
     background-color: var(--promo_color_shade);
   }
 
-  .adv__button:active {
+  .adv__link:active {
     color: var(--black);
     background-color: var(--promo_color_shade);
   }
 
-  .adv__button:active path:first-child {
+  .adv__link:active path:first-child {
     fill: var(--black);
   }
 
-  .adv__button:active path:last-child {
+  .adv__link:active path:last-child {
     fill: var(--white);
   }
 

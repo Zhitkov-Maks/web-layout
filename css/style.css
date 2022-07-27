@@ -1824,11 +1824,12 @@ button:focus-visible {
   padding-left: 5px;
 }
 
-.adv__button {
+.adv__link {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 15.6vw;
+  width: 300px;
+
   padding: 22px 0;
 
   font-weight: 500;

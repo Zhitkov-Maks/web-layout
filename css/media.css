@@ -431,7 +431,7 @@
     line-height: 180%;
   }
 
-  .adv__button {
+  .adv__link {
     max-width: 29.6vw;
   }
 
@@ -997,7 +997,7 @@
     width: 539%;
   }
 
-  .adv__button {
+  .adv__link {
     max-width: 39vw;
   }
 
@@ -1228,7 +1228,7 @@
     width: calc(100% / 2);
   }
 
-  .adv__button {
+  .adv__link {
     width: 70%;
     max-width: 100%;
   }
@@ -2120,7 +2120,7 @@
 
   .quests__accordion__descr {
     width: 100%;
-    margin-bottom: 38px;
+    margin-bottom: 36px;
     padding-top: 5px;
 
     font-size: 16px;
@@ -2221,7 +2221,7 @@
   }
 
   .playlists__item:last-child {
-    padding-right: 0;
+    padding-right: 150px;
   }
 
   .playlists__block__item {
@@ -2319,7 +2319,7 @@
     font-size: 24px;
   }
 
-  .adv__button {
+  .adv__link {
     width: 80%;
     padding: 14px 0;
     font-size: 14px;
@@ -2591,7 +2591,7 @@
     width: calc(100% - 143px);
   }
 
-  .adv__button {
+  .adv__link {
     width: 100%;
   }
 
