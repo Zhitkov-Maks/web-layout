@@ -100,14 +100,9 @@ body {
 }
 
 
-/*для Firefox иначе outline в виде пунктира пунктир*/
-button:focus-visible {
-  outline: none;
-}
-
 
 .container {
-  max-width: 4000px;
+  max-width: 3400px;
   padding-top: 94px;
   padding-bottom: 94px;
   margin: 0 auto;
@@ -124,6 +119,11 @@ button:focus-visible {
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+/*для Firefox иначе outline в виде пунктира пунктир*/
+button:focus-visible {
+  outline: none;
 }
 
 
@@ -145,6 +145,7 @@ button:focus-visible {
 .content {
   width: 57.819vw;
   min-width: 1110px;
+  max-width: 1600px;
   box-sizing: border-box;
   margin: 0 auto;
 }
@@ -285,6 +286,7 @@ button:focus-visible {
 /*header__bottom*/
 
 .header-content {
+  padding: 0;
   border: 1px solid var(--ligth_color_40);
 }
 
@@ -303,6 +305,7 @@ button:focus-visible {
 
 .header__bottom__list {
   width: 32.1vw;
+  max-width: 800px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1201,6 +1204,7 @@ button:focus-visible {
 .quests__accordion {
   width: 38.1vw;
   min-width: 730px;
+  max-width: 1200px;
   margin-right: 30px;
 }
 
@@ -1276,8 +1280,7 @@ button:focus-visible {
   justify-content: center;
   align-items: center;
 
-  width: 15vw;
-  min-width: 350px;
+  width: 350px;
   height: 220px;
 
   background-color: var(--ligth_black);
@@ -1323,8 +1326,7 @@ button:focus-visible {
   right: 0;
   top: 0;
 
-  width: 15vw;
-  min-width: 350px;
+  width: 350px;
 }
 
 .quests__wrap {
@@ -1742,6 +1744,7 @@ button:focus-visible {
   left: -1px;
   height: 20px;
   width: 23.5vw;
+  max-width: 500px;
 
   background-image: url("../img/adv-svg-desct.svg");
   background-size: contain;
@@ -1757,6 +1760,7 @@ button:focus-visible {
 
 .adv__block__content {
   width: 23.2vw;
+  max-width: 500px;
   min-height: 550px;
 }
 
