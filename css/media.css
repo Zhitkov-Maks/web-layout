@@ -977,13 +977,11 @@
 
   .adv__block__content {
     width: 100%;
-    max-width: 100%;
     padding-top: 485px;
   }
 
   .adv__image:before {
     width: 100%;
-    max-width: 100%;
     background-image: url("../img/adv-svg-3.svg");
   }
 
@@ -1388,10 +1386,6 @@
   .header-content,
   .header__bottom {
     max-height: 45px;
-  }
-
-  .header-content {
-    padding: 0;
   }
 
   .active-2 {
