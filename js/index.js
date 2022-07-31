@@ -216,7 +216,6 @@ for (let i = 0; i < headerBtn.length; ++i) {
 }
 
 const container = document.querySelector(".about__container");
-
 const swiper = new Swiper('.about__list', {
   speed: 300,
   spaceBetween: 20,
