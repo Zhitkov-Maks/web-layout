@@ -50,6 +50,10 @@
     padding-top: 2px;
   }
 
+  .header__nav {
+    margin: 0;
+  }
+
   .form {
     width: 380px;
     padding: 15px 10px 15px 12px;
@@ -548,16 +552,17 @@
     justify-content: space-between;
   }
 
+  .header__top__nav {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
   .header__block-nav {
     display: none;
   }
 
-  .header__top__nav {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .header__block-nav {
+  .header__block-navMenu {
     content: "";
     position: absolute;
     top: 60px;
@@ -565,17 +570,16 @@
     right: 0;
     bottom: 174px;
     z-index: 6;
-
     display: block;
     padding-top: 100px;
     margin: 0 auto;
 
-    background-color: #D2D5DD;
     color: var(--black);
-    visibility: hidden;
+    background-color: #D2D5DD;
 
     transform: translateX(-100%);
-    transition: transform .3s ease-in-out, opacity .3s ease-in-out, visibility .3s ease-in-out;
+    transition: transform .3s ease-in-out, visibility .5s ease-in-out;
+    visibility: hidden;
   }
 
   .header__nav:before {
@@ -612,8 +616,8 @@
     display: flex;
     justify-content: center;
 
-    transform: translateX(0);
     visibility: visible;
+    transform: translateX(0);
   }
 
   .header__nav {
@@ -718,10 +722,6 @@
 
   .hero__content:before {
     display: none;
-  }
-
-  .broadcast__item__content:before {
-    min-width: 113px;
   }
 
   .quests__accordion {
@@ -1288,7 +1288,7 @@
     display: none;
   }
 
-  .header__block-nav {
+  .header__block-navMenu {
     padding-top: 30px;
     bottom: 40%;
   }
@@ -1361,8 +1361,11 @@
     padding-top: 5px;
   }
 
-
   .header__bottom__tablet {
+    display: none;
+  }
+
+  .header__bottom__tabletMenu {
     content: "";
     position: absolute;
     top: 50%;
@@ -1488,7 +1491,7 @@
     transition: transform .3s ease-in-out, opacity .3s ease-in-out, visibility .3s ease-in-out;
   }
 
-  .header__block-nav {
+  .header__block-navMenu {
     top: 50px;
   }
 
@@ -1896,7 +1899,8 @@
     flex-direction: column;
     justify-content: space-between;
 
-    padding: 15px 8px 11px 9px;
+    min-height: 100px;
+    padding: 5px 8px 11px 9px;
 
     border: 1px solid var(--lite_color);
   }
@@ -1910,15 +1914,6 @@
     min-height: 100px;
     margin-bottom: 29px;
     margin-right: 30px;
-    padding-top: 12vw;
-  }
-
-  .broadcast__item__content:before {
-    height: 13vw;
-    min-height: 50px;
-    width: 100%;
-    min-width: 113px;
-    background-size: 100%;
   }
 
   .broadcast__item__title {

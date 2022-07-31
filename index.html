@@ -83,6 +83,37 @@
               </ul>
             </nav>
           </div>
+          <div class="header__block-navMenu">
+            <nav class="header__nav">
+              <ul class="list-reset header__top__list">
+                <li class="header__top__item">
+                  <a href="#podcasts" class="header__top__link nav-effect">
+                    Подкасты
+                  </a>
+                </li>
+                <li class="header__top__item">
+                  <a href="#broadcast" class="header__top__link nav-effect">
+                    Передачи
+                  </a>
+                </li>
+                <li class="header__top__item">
+                  <a href="#quests" class="header__top__link nav-effect">
+                    Гости
+                  </a>
+                </li>
+                <li class="header__top__item">
+                  <a href="#playlists" class="header__top__link nav-effect">
+                    Плейлисты
+                  </a>
+                </li>
+                <li class="header__top__item">
+                  <a href="#about" class="header__top__link nav-effect">
+                    О нас
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
         <div class="header__top__buttons">
           <button class="btn-reset header__top__btn-searth" aria-label="Поиск">
@@ -119,6 +150,44 @@
             </button>
           </div>
           <div class="header__bottom__tablet">
+            <!--Обертка чтобы вывести блок для мобильных устройств-->
+            <div class="header__bottom__block-list">
+              <!--Чтобы задать ширину-->
+              <ul class="list-reset header__bottom__list">
+                <li class="header__bottom__item">
+                  <a href="" class="header__bottom__link nav-effect">
+                    Новости
+                  </a>
+                </li>
+                <li class="header__bottom__item">
+                  <a href="" class="header__bottom__link nav-effect">
+                    Блоги
+                  </a>
+                </li>
+                <li class="header__bottom__item">
+                  <a href="" class="header__bottom__link nav-effect">
+                    Топы
+                  </a>
+                </li>
+                <li class="header__bottom__item">
+                  <a href="" class="header__bottom__link nav-effect">
+                    Опросы
+                  </a>
+                </li>
+                <li class="header__bottom__item">
+                  <a href="" class="header__bottom__link nav-effect">
+                    Рейтинги
+                  </a>
+                </li>
+                <li class="header__bottom__item">
+                  <a href="" class="header__bottom__link nav-effect">
+                    Реклама
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="header__bottom__tabletMenu">
             <!--Обертка чтобы вывести блок для мобильных устройств-->
             <div class="header__bottom__block-list">
               <!--Чтобы задать ширину-->
@@ -748,6 +817,10 @@
           </div>
           <ul class="list-reset broadcast__list">
             <li class="broadcast__item">
+              <picture class="broadcast__image">
+                <source srcset="img/broadcasts/broad-1.png" media="(min-width: 577px)">
+                <img src="img/broadcasts/broadcasts-2-1.png" alt=""/>
+              </picture>
               <div class="broadcast__item__content broad1">
                 <div>
                   <h3 class="broadcast__item__title">
@@ -765,6 +838,10 @@
               </div>
             </li>
             <li class="broadcast__item">
+              <picture class="broadcast__image">
+                <source srcset="img/broadcasts/broad-2.png" media="(min-width: 577px)">
+                <img src="img/broadcasts/broadcasts-2-2.png" alt=""/>
+              </picture>
               <div class="broadcast__item__content broad2">
                 <div>
                   <h3 class="broadcast__item__title">
@@ -782,6 +859,10 @@
               </div>
             </li>
             <li class="broadcast__item">
+              <picture class="broadcast__image">
+                <source srcset="img/broadcasts/broad-3.png" media="(min-width: 577px)">
+                <img src="img/broadcasts/broadcasts-2-3.png" alt=""/>
+              </picture>
               <div class="broadcast__item__content broad3">
                 <div>
                   <h3 class="broadcast__item__title">
@@ -799,6 +880,10 @@
               </div>
             </li>
             <li class="broadcast__item">
+              <picture class="broadcast__image">
+                <source srcset="img/broadcasts/broad-4.png" media="(min-width: 577px)">
+                <img src="img/broadcasts/broadcasts-2-4.png" alt=""/>
+              </picture>
               <div class="broadcast__item__content broad4">
                 <div>
                   <h3 class="broadcast__item__title">
@@ -816,6 +901,10 @@
               </div>
             </li>
             <li class="broadcast__item">
+              <picture class="broadcast__image">
+                <source srcset="img/broadcasts/broad-5.png" media="(min-width: 577px)">
+                <img src="img/broadcasts/broadcasts-2-5.png" alt=""/>
+              </picture>
               <div class="broadcast__item__content broad5">
                 <div>
                   <h3 class="broadcast__item__title">
@@ -833,6 +922,10 @@
               </div>
             </li>
             <li class="broadcast__item">
+              <picture class="broadcast__image">
+                <source srcset="img/broadcasts/broad-6.png" media="(min-width: 577px)">
+                <img src="img/broadcasts/broadcasts-2-6.png" alt=""/>
+              </picture>
               <div class="broadcast__item__content broad6">
                 <div>
                   <h3 class="broadcast__item__title">
@@ -9500,9 +9593,9 @@
       </div>
     </footer>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="js/choices.js" defer></script>
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery-1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/validate.js"></script>
     <script src="js/index.js"></script>
   </body>
